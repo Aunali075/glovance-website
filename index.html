@@ -167,6 +167,12 @@
                 <a href="#projects" class="text-gray-300 hover:text-white transition-colors">Projects</a>
                 <a href="#products" class="text-gray-300 hover:text-white transition-colors">Products</a>
                 <a href="#contact" class="text-gray-300 hover:text-white transition-colors">Contact</a>
+                <a href="#booking"
+                    class="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold shadow-lg shadow-cyan-500/40 hover:from-cyan-400 hover:to-purple-500 transition-all">
+                    Book Now
+                </a>
+
+
             </div>
             <div class="md:hidden">
                 <button id="menu-btn" class="text-white focus:outline-none">
@@ -183,6 +189,12 @@
             <a href="#projects" class="block py-2 text-gray-300 hover:text-white">Projects</a>
             <a href="#products" class="block py-2 text-gray-300 hover:text-white">Products</a>
             <a href="#contact" class="block py-2 text-gray-300 hover:text-white">Contact</a>
+            <a href="#booking"
+                class="px-4 py-2 rounded-lg bg-gradient-to-r from-cyan-500 to-purple-600 text-white font-semibold shadow-lg shadow-cyan-500/40 hover:from-cyan-400 hover:to-purple-500 transition-all">
+                Book Now
+            </a>
+
+
         </div>
     </nav>
 
@@ -253,6 +265,101 @@
             🎉 Welcome to <span class="text-cyan-400">GLOVANCE</span> – Transforming Ideas Into Digital Reality 🚀
         </h2>
     </div>
+
+    <!-- Glovance — Futuristic Inquiry Console (compact, holographic sideview) -->
+    <section id="booking" class="relative bg-[#07080a] text-white px-6 py-16">
+        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-10 items-center" style="min-height:85vh;">
+
+            <!-- LEFT: Inquiry Form -->
+            <div class="z-20">
+                <div class="mb-6">
+                    <h2
+                        class="text-3xl md:text-4xl font-extrabold tracking-tight bg-clip-text text-transparent bg-gradient-to-r from-cyan-300 to-violet-400">
+                        Let’s Build Your Next Digital Experience
+                    </h2>
+                    <p class="text-gray-400 mt-2 max-w-lg">Quickly tell us what you need — choose a service, set your
+                        budget, and share the details. We’ll respond with a custom plan.</p>
+                </div>
+
+                <form name="inquiry" method="POST" data-netlify="true"
+                    class="space-y-4 bg-gradient-to-b from-white/2 to-white/1 backdrop-blur-md border border-white/6 rounded-2xl p-5 md:p-6 shadow-[0_10px_30px_rgba(2,6,23,0.6)]">
+                    <input type="hidden" name="form-name" value="inquiry">
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-3">
+                        <div>
+                            <label class="text-xs text-gray-300">Full Name</label>
+                            <input name="name" type="text" required
+                                class="mt-1 w-full px-3 py-2 rounded-lg bg-[#071017] border border-white/6 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+                        </div>
+                        <div>
+                            <label class="text-xs text-gray-300">Email</label>
+                            <input name="email" type="email" required
+                                class="mt-1 w-full px-3 py-2 rounded-lg bg-[#071017] border border-white/6 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+                        </div>
+                    </div>
+
+                    <div>
+                        <label class="text-xs text-gray-300">Service</label>
+                        <select name="service" required
+                            class="mt-1 w-full px-3 py-2 rounded-lg bg-[#071017] border border-white/6 focus:outline-none focus:ring-2 focus:ring-cyan-400">
+                            <option value="">Choose service</option>
+                            <option>Landing Page</option>
+                            <option>Portfolio Template</option>
+                            <option>E-commerce Store</option>
+                            <option>Front-end Optimization</option>
+                            <option>Custom Project</option>
+                        </select>
+                    </div>
+
+                    <div>
+                        <label class="text-xs text-gray-300">Budget: <span id="inqBudgetValue"
+                                class="text-cyan-300 font-medium">$500</span></label>
+                        <input id="inqBudget" name="budget" type="range" min="50" max="10000" step="50" value="500"
+                            class="mt-2 w-full accent-cyan-400" />
+                    </div>
+
+                    <div>
+                        <label class="text-xs text-gray-300">Preferred Date</label>
+                        <input name="date" type="date"
+                            class="mt-1 w-full px-3 py-2 rounded-lg bg-[#071017] border border-white/6 focus:outline-none focus:ring-2 focus:ring-cyan-400" />
+                    </div>
+
+                    <div>
+                        <label class="text-xs text-gray-300">Project Details</label>
+                        <textarea name="details" rows="4" placeholder="A short brief, goals, or link to examples..."
+                            class="mt-1 w-full px-3 py-2 rounded-lg bg-[#071017] border border-white/6 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-cyan-400"></textarea>
+                    </div>
+
+                    <div class="flex gap-3 items-center">
+                        <button type="submit"
+                            class="relative overflow-hidden inline-flex items-center justify-center gap-2 px-5 py-2 rounded-xl font-semibold text-[#021018] bg-gradient-to-r from-cyan-300 to-amber-300 shadow-lg hover:scale-[1.02] transition-transform">
+                            <span>Send Inquiry</span>
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-4 w-4 opacity-90" viewBox="0 0 24 24"
+                                fill="none" stroke="currentColor">
+                                <path stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+                                    stroke-linejoin="round" d="M5 12h14M12 5l7 7-7 7" />
+                            </svg>
+                        </button>
+
+                        <div class="text-sm text-gray-400">Or email <a href="mailto:hello@glovance.com"
+                                class="text-cyan-300 underline">glovanceagency@gmail.com</a></div>
+                    </div>
+                </form>
+            </div>
+
+            <!-- RIGHT: Holographic Side-View Core (compact & advanced) -->
+            <div class="relative w-full h-[420px] md:h-[520px] flex items-center justify-center select-none">
+                <!-- Canvas -->
+                <canvas id="holoCanvas" class="absolute inset-0 w-full h-full"></canvas>
+
+                <!-- Foreground micro UI (optional) -->
+                <div class="relative z-10 text-center pointer-events-none">
+                    <!-- <div class="text-sm text-cyan-300 font-medium tracking-wider">GLOVANCE · HOLO CORE</div> -->
+                    <!-- <div class="mt-2 text-xs text-gray-400">Interactive visualization</div> -->
+                </div>
+            </div>
+        </div>
+    </section>
 
     <!-- Skyline Section -->
     <section class="relative bg-black py-20 overflow-hidden">
@@ -1195,6 +1302,147 @@
             document.getElementById("popupModal").classList.add("hidden");
             document.getElementById("popupModal").classList.remove("flex");
         }
+
+        document.addEventListener("DOMContentLoaded", () => {
+            // Budget slider
+            const inqBudget = document.getElementById('inqBudget');
+            const inqBudgetValue = document.getElementById('inqBudgetValue');
+            if (inqBudget && inqBudgetValue) {
+                inqBudget.addEventListener('input', () => inqBudgetValue.textContent = '$' + inqBudget.value);
+            }
+
+            // Optimized holoCanvas animation
+            const holoCanvas = document.getElementById('holoCanvas');
+            if (!holoCanvas) return;
+            const ctx = holoCanvas.getContext('2d');
+            let W, H, DPR = Math.max(1, window.devicePixelRatio || 1);
+            let visible = true;
+
+            // Pause when tab hidden
+            document.addEventListener('visibilitychange', () => visible = !document.hidden);
+
+            function resize() {
+                W = holoCanvas.offsetWidth;
+                H = holoCanvas.offsetHeight;
+                const scale = window.innerWidth > 1024 ? 1.6 : 1.1; // reduce pixel density on large screens
+                holoCanvas.width = Math.floor(W * DPR / scale);
+                holoCanvas.height = Math.floor(H * DPR / scale);
+                holoCanvas.style.width = W + 'px';
+                holoCanvas.style.height = H + 'px';
+                ctx.setTransform(DPR / scale, 0, 0, DPR / scale, 0, 0);
+            }
+            window.addEventListener('resize', resize);
+            resize();
+
+            // Dynamic complexity (lighter for smaller devices)
+            const layers = window.innerWidth > 1000 ? 5 : 4;
+            const pointsPerLayer = window.innerWidth > 1000 ? 22 : 14;
+            const baseRadius = Math.min(W, H) * 0.12;
+            const layerSpacing = baseRadius * 0.32;
+            const center = { x: W * 0.58, y: H * 0.48 };
+
+            const holo = [];
+            for (let L = 0; L < layers; L++) {
+                const layer = [];
+                const tilt = (L - (layers - 1) / 2) * 0.22;
+                const r = baseRadius + L * layerSpacing;
+                for (let i = 0; i < pointsPerLayer; i++) {
+                    const a = (i / pointsPerLayer) * Math.PI * 2;
+                    const px = Math.cos(a) * r * 1.2;
+                    const py = Math.sin(a) * r * 0.75 + tilt * r;
+                    layer.push({ x: px, y: py, a });
+                }
+                holo.push(layer);
+            }
+
+            let t = 0;
+            let mouseX = 0, mouseY = 0, mx = 0, my = 0;
+
+            holoCanvas.addEventListener('mousemove', (e) => {
+                const rect = holoCanvas.getBoundingClientRect();
+                mouseX = ((e.clientX - rect.left) / rect.width - 0.5) * 2;
+                mouseY = ((e.clientY - rect.top) / rect.height - 0.5) * 2;
+            });
+            holoCanvas.addEventListener('mouseleave', () => { mouseX = 0; mouseY = 0; });
+
+            function draw() {
+                if (!visible) return requestAnimationFrame(draw);
+
+                ctx.clearRect(0, 0, W, H);
+                const g = ctx.createLinearGradient(0, 0, W, H);
+                g.addColorStop(0, 'rgba(5,8,12,0.85)');
+                g.addColorStop(1, 'rgba(2,4,6,0.95)');
+                ctx.fillStyle = g;
+                ctx.fillRect(0, 0, W, H);
+
+                mx += (mouseX - mx) * 0.08;
+                my += (mouseY - my) * 0.08;
+
+                for (let L = 0; L < layers; L++) {
+                    const layer = holo[L];
+                    const depth = L / (layers - 1);
+                    const glow = 0.1 + 0.3 * (1 - depth);
+
+                    // fewer beams for performance
+                    if (L < layers - 1 && L % 2 === 0) {
+                        const next = holo[L + 1];
+                        for (let i = 0; i < pointsPerLayer; i += 3) {
+                            const p = layer[i];
+                            const q = next[(i + Math.floor(t * 0.3)) % pointsPerLayer];
+                            const x1 = center.x + p.x + mx * 40 * depth;
+                            const y1 = center.y + p.y + my * 30 * depth;
+                            const x2 = center.x + q.x + mx * 40 * (depth + 0.05);
+                            const y2 = center.y + q.y + my * 30 * (depth + 0.05);
+                            ctx.beginPath();
+                            ctx.moveTo(x1, y1);
+                            ctx.lineTo(x2, y2);
+                            ctx.strokeStyle = `rgba(50,230,230,${0.05 + 0.25 * (1 - depth)})`;
+                            ctx.lineWidth = 1;
+                            ctx.stroke();
+                        }
+                    }
+
+                    for (let i = 0; i < pointsPerLayer; i++) {
+                        const p = layer[i];
+                        const ang = p.a + t * (0.002 + L * 0.0006);
+                        const wobble = Math.sin(t * 0.004 + i) * 1.5;
+                        const px = center.x + Math.cos(ang) * (baseRadius + L * layerSpacing) * 1.2 + mx * 40 * depth + wobble;
+                        const py = center.y + Math.sin(ang) * (baseRadius + L * layerSpacing) * 0.75 + (L - (layers - 1) / 2) * layerSpacing * 0.4 + my * 30 * depth;
+
+                        const rad = 1.2 + (1.4 * (1 - depth));
+                        const g2 = ctx.createRadialGradient(px, py, 0, px, py, rad * 8);
+                        g2.addColorStop(0, `rgba(0,220,255,${0.8 * (1 - depth)})`);
+                        g2.addColorStop(1, 'rgba(0,0,0,0)');
+                        ctx.fillStyle = g2;
+                        ctx.beginPath();
+                        ctx.arc(px, py, rad * 6, 0, Math.PI * 2);
+                        ctx.fill();
+
+                        ctx.beginPath();
+                        ctx.arc(px, py, rad, 0, Math.PI * 2);
+                        ctx.fillStyle = `rgba(180,255,255,${0.8 - depth * 0.5})`;
+                        ctx.fill();
+                    }
+                }
+
+                // central holographic core
+                const coreX = center.x + mx * 12;
+                const coreY = center.y + my * 8;
+                const pulse = 1 + Math.sin(t * 0.02) * 0.06;
+                for (let r = 0; r < 4; r++) {
+                    ctx.beginPath();
+                    ctx.arc(coreX, coreY, (r * 18 + 28) * pulse, 0, Math.PI * 2);
+                    ctx.strokeStyle = `rgba(80,240,240,${0.05 + (4 - r) * 0.07})`;
+                    ctx.lineWidth = 1.2 - r * 0.18;
+                    ctx.stroke();
+                }
+
+                t++;
+                requestAnimationFrame(draw);
+            }
+
+            requestAnimationFrame(draw);
+        });
 
     </script>
 </body>
